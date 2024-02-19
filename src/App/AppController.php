@@ -9,8 +9,6 @@
 
 namespace App;
 
-use App\Library\BaseModel;
-use App\Library\Config;
 use Psr\Container\ContainerInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
@@ -51,5 +49,10 @@ class AppController
 			'data' => $ipInfo
 		);
 		return $response->withJson($data);
+	}
+
+	public function php(Request $request, Response $response)
+	{
+		phpinfo();
 	}
 }

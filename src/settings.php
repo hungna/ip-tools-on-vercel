@@ -18,18 +18,5 @@ return [
 		'renderer' => [
 			'template_path' => TEMPLATE_PATH,
 		],
-		// Monolog settings
-		'logger' => [
-			'name' => 'app',
-//            'path' => isset($_ENV['docker']) ? 'php://stdout' : LOGS_PATH . 'Log-' . date('Y-m-d') . '.log',
-			'path' => 'php://stdout',
-			'level' => Monolog\Logger::DEBUG,
-		],
-		// Cấu hình Database
-		'db' => [
-			'dsn' => 'mysql:host=127.0.0.1;port=33060;dbname=slim_test;charset=utf8',
-			'username' => 'root',
-			'password' => 'hungna',
-		]
 	],
 ];
