@@ -25,9 +25,9 @@ $container = $app->getContainer();
  *
  */
 $container['renderer'] = function ($c) {
-    $settings = $c->get('settings')['renderer'];
+	$settings = $c->get('settings')['renderer'];
 
-    return new Slim\Views\PhpRenderer($settings['template_path']);
+	return new Slim\Views\PhpRenderer($settings['template_path']);
 };
 
 /**
@@ -42,12 +42,12 @@ $container['renderer'] = function ($c) {
  * @time     : 09/17/2021 34:49
  */
 $container['logger'] = function ($c) {
-    $settings = $c->get('settings')['logger'];
-    $logger = new Monolog\Logger($settings['name']);
-    $logger->pushProcessor(new Monolog\Processor\UidProcessor());
-    $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
+	$settings = $c->get('settings')['logger'];
+	$logger = new Monolog\Logger($settings['name']);
+	$logger->pushProcessor(new Monolog\Processor\UidProcessor());
+	$logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
 
-    return $logger;
+	return $logger;
 };
 
 /**
@@ -61,12 +61,11 @@ $container['logger'] = function ($c) {
  *
  */
 $container['db'] = function ($app) {
-    $settings = $app->get('settings')['db'];
-    $pdo = new FaaPz\PDO\Database($settings['dsn'], $settings['username'], $settings['password']);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // Cấu hình dữ liệu trả về luôn ở dạng Object
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+	$settings = $app->get('settings')['db'];
+	$pdo = new FaaPz\PDO\Database($settings['dsn'], $settings['username'], $settings['password']);
+	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	// Cấu hình dữ liệu trả về luôn ở dạng Object
+	$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-    return $pdo;
+	return $pdo;
 };
-

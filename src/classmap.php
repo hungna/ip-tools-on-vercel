@@ -16,19 +16,19 @@
  */
 function registerCommand($className = '')
 {
-    $root = 'src/Commands/';
-    $prefix = 'App\\Command\\';
+	$root = 'src/Commands/';
+	$prefix = 'App\\Command\\';
 
-    // bỏ prefix
-    $classWithoutPrefix = preg_replace('/^' . preg_quote($prefix) . '/', '', $className);
+	// bỏ prefix
+	$classWithoutPrefix = preg_replace('/^' . preg_quote($prefix) . '/', '', $className);
 
-    // Thay thế \ thành /
-    $file = str_replace('\\', DIRECTORY_SEPARATOR, $classWithoutPrefix) . '.php';
+	// Thay thế \ thành /
+	$file = str_replace('\\', DIRECTORY_SEPARATOR, $classWithoutPrefix) . '.php';
 
-    $path = $root . $file;
-    if (is_file($path) && file_exists($path)) {
-        require_once $path;
-    }
+	$path = $root . $file;
+	if (is_file($path) && file_exists($path)) {
+		require_once $path;
+	}
 }
 
 /**
@@ -41,19 +41,19 @@ function registerCommand($className = '')
  */
 function registerLibrary($className = '')
 {
-    $root = 'src/Library/';
-    $prefix = 'App\\Library\\';
+	$root = 'src/Library/';
+	$prefix = 'App\\Library\\';
 
-    // bỏ prefix
-    $classWithoutPrefix = preg_replace('/^' . preg_quote($prefix) . '/', '', $className);
+	// bỏ prefix
+	$classWithoutPrefix = preg_replace('/^' . preg_quote($prefix) . '/', '', $className);
 
-    // Thay thế \ thành /
-    $file = str_replace('\\', DIRECTORY_SEPARATOR, $classWithoutPrefix) . '.php';
+	// Thay thế \ thành /
+	$file = str_replace('\\', DIRECTORY_SEPARATOR, $classWithoutPrefix) . '.php';
 
-    $path = $root . $file;
-    if (is_file($path) && file_exists($path)) {
-        require_once $path;
-    }
+	$path = $root . $file;
+	if (is_file($path) && file_exists($path)) {
+		require_once $path;
+	}
 }
 
 /**
@@ -66,19 +66,19 @@ function registerLibrary($className = '')
  */
 function registerHelper($className = '')
 {
-    $root = 'src/Helper/';
-    $prefix = 'App\\Helper\\';
+	$root = 'src/Helper/';
+	$prefix = 'App\\Helper\\';
 
-    // bỏ prefix
-    $classWithoutPrefix = preg_replace('/^' . preg_quote($prefix) . '/', '', $className);
+	// bỏ prefix
+	$classWithoutPrefix = preg_replace('/^' . preg_quote($prefix) . '/', '', $className);
 
-    // Thay thế \ thành /
-    $file = str_replace('\\', DIRECTORY_SEPARATOR, $classWithoutPrefix) . '.php';
+	// Thay thế \ thành /
+	$file = str_replace('\\', DIRECTORY_SEPARATOR, $classWithoutPrefix) . '.php';
 
-    $path = $root . $file;
-    if (is_file($path) && file_exists($path)) {
-        require_once $path;
-    }
+	$path = $root . $file;
+	if (is_file($path) && file_exists($path)) {
+		require_once $path;
+	}
 }
 
 spl_autoload_register('registerCommand');
