@@ -14,6 +14,7 @@ use Slim\Http\Response;
  * @var \Slim\App $app
  */
 $app->get('/', App\AppController::class . ':ip_address');
+$app->get('/ip', App\AppController::class . ':only_ip');
 $app->get('/php', App\AppController::class . ':php');
 
 //$app->group('/api/v1', function () use ($app) {

@@ -35,6 +35,15 @@ class AppController
 		$this->container = $container;
 	}
 
+	public function only_ip(Request $request, Response $response)
+	{
+		$currentIP = getIpAddress();
+		$data = array(
+			'ip' => $currentIP
+		);
+		return $response->withJson($data);
+	}
+
 	public function ip_address(Request $request, Response $response)
 	{
 		$params = $request->getQueryParams();
