@@ -41,7 +41,7 @@ class AppController
 		$data = array(
 			'ip' => $currentIP
 		);
-		return $response->withJson($data);
+		return $response->withJson($data, 200, JSON_PRETTY_PRINT);
 	}
 
 	public function ip_address(Request $request, Response $response)
@@ -57,7 +57,7 @@ class AppController
 		$data = array(
 			'data' => $ipInfo
 		);
-		return $response->withJson($data);
+		return $response->withJson($data, 200, JSON_PRETTY_PRINT);
 	}
 
 	public function php(Request $request, Response $response)
