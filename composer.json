@@ -1,54 +1,54 @@
 {
-	"name": "nguyenanhung/my-ip-tools",
-	"description": "My IP Tools - Use Slim Framework 3 and Deploy to Vercel",
-	"keywords": [
-		"micro framework",
-		"php micro framework",
-		"slim",
-		"slim 3",
-		"slim 3 vercel",
-		"slim-vercel",
-		"skeleton",
-		"rest",
-		"console",
-		"router",
-		"psr7"
-	],
-	"type": "project",
-	"homepage": "https://github.com/hungna/ip-tools-on-vercel",
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Josh Lockhart",
-			"email": "info@joshlockhart.com",
-			"homepage": "https://www.joshlockhart.com/"
-		},
-		{
-			"name": "Nguyen An Hung",
-			"email": "dev@nguyenanhung.com",
-			"homepage": "https://nguyenanhung.com"
-		}
-	],
-	"require": {
-		"php": ">=5.6",
-		"ext-pdo": "*",
-		"ext-json": "*",
-		"slim/slim": "^3.12",
-		"slim/flash": "^0.4",
-		"slim/csrf": "^0.8",
-		"slim/php-view": "^2.2",
-		"nguyenanhung/ip-helper": "^2.0 || ^1.0"
-	},
-	"autoload": {
-		"psr-4": {
-			"App\\": "src/App/",
-			"App\\Library\\": "src/Library/"
-		}
-	},
-	"config": {
-		"process-timeout": 0
-	},
-	"scripts": {
-		"start": "php -S localhost:8080 -t ./"
-	}
+    "name": "nguyenanhung/my-ip-tools",
+    "description": "My IP Tools - Use Slim Framework 3 and Deploy to Vercel",
+    "keywords": [
+        "micro framework",
+        "php micro framework",
+        "slim",
+        "slim 3",
+        "slim 3 vercel",
+        "slim-vercel",
+        "skeleton",
+        "rest",
+        "console",
+        "router",
+        "psr7"
+    ],
+    "type": "project",
+    "homepage": "https://github.com/hungna/ip-tools-on-vercel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josh Lockhart",
+            "email": "info@joshlockhart.com",
+            "homepage": "https://www.joshlockhart.com/"
+        },
+        {
+            "name": "Nguyen An Hung",
+            "email": "dev@nguyenanhung.com",
+            "homepage": "https://nguyenanhung.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "slim/slim": "^3.12",
+        "slim/flash": "^0.4",
+        "slim/csrf": "^0.8",
+        "slim/php-view": "^2.2",
+        "nguyenanhung/ip-helper": "^2.0 || ^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App/",
+            "App\\Library\\": "src/Library/"
+        }
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t ./"
+    }
 }
