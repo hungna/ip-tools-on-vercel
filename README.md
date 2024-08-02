@@ -5,7 +5,7 @@
 ## Example Usage
 
 ```shell
-curl --location 'https://ip-tools-ruby.vercel.app/?ip=8.8.8.8'
+curl --location 'https://ip-tools-ruby.vercel.app/?ip=1.1.1.1'
 ```
 
 ```php
@@ -14,7 +14,7 @@ curl --location 'https://ip-tools-ruby.vercel.app/?ip=8.8.8.8'
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://ip-tools-ruby.vercel.app/?ip=8.8.8.8',
+  CURLOPT_URL => 'https://ip-tools-ruby.vercel.app/?ip=1.1.1.1',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
