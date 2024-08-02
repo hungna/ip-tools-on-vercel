@@ -1,20 +1,20 @@
 {
-	"version": 2,
-	"framework": null,
-	"functions": {
-		"api/**/*.php": {
-			"runtime": "vercel-php@0.6.1"
-		}
-	},
-	"outputDirectory": "public",
-	"routes": [
-		{
-			"src": "/assets/(css|favicon|images|js)/(.*)",
-			"dest": "assets/$1/$2"
-		},
-		{
-			"src": "/(.*)",
-			"dest": "/api/index.php"
-		}
-	]
+    "version": 2,
+    "framework": null,
+    "functions": {
+        "api/**/*.php": {
+            "runtime": "vercel-php@0.6.2"
+        }
+    },
+    "outputDirectory": "public",
+    "routes": [
+        {
+            "src": "/assets/(css|favicon|images|js)/(.*)",
+            "dest": "assets/$1/$2"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ]
 }
