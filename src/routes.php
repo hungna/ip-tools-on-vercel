@@ -9,11 +9,13 @@
 
 use Slim\Http\Request;
 use Slim\Http\Response;
+use Slim\Views\PhpRenderer;
 
 /**
  * @var \Slim\App $app
  */
 $app->get('/', App\AppController::class . ':ip_address');
+$app->get('/view', App\AppController::class . ':view_ip_address');
 $app->get('/ip', App\AppController::class . ':only_ip');
 $app->get('/php', App\AppController::class . ':php');
 
@@ -22,5 +24,5 @@ $app->get('/php', App\AppController::class . ':php');
 //});
 //
 //$app->group('', function () use ($app) {
-//	$app->get('/app/test', App\AppController::class . ':test');
+//    $app->get('/app/test', App\AppController::class . ':test');
 //});

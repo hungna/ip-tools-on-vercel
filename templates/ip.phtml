@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8"/>
+    <title>IP Information: <?= isset($ip) ? $ip : '' ?></title>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="description" content="Get Data IP Information">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        } </style>
+</head>
+<body><h2>Thông tin địa chỉ IP của bạn: <?= isset($ip) ? $ip : '' ?></h2>
+<table>
+    <caption></caption>
+    <tr>
+        <th>IP</th>
+        <th><?= isset($ip) ? $ip : '' ?></th>
+    </tr>
+    <tr>
+        <th>ISP</th>
+        <th><?= isset($data['isp']) ? $data['isp'] : '' ?></th>
+    </tr>
+    <tr>
+        <th>ORG</th>
+        <th><?= isset($data['org']) ? $data['org'] : '' ?></th>
+    </tr>
+    <tr>
+        <th>Timezone</th>
+        <th><?= isset($data['timezone']) ? $data['timezone'] : '' ?></th>
+    </tr>
+    <tr>
+        <th>City</th>
+        <th><?= isset($data['city']) ? $data['city'] : '' ?></th>
+    </tr>
+    <tr>
+        <th>Region</th>
+        <th><?= isset($data['region']) ? $data['region'] : '' ?></th>
+    </tr>
+    <tr>
+        <th>Region Name</th>
+        <th><?= isset($data['regionName']) ? $data['regionName'] : '' ?></th>
+    </tr>
+    <tr>
+        <th>Country</th>
+        <th><?= isset($data['country']) ? $data['country'] : '' ?></th>
+    </tr>
+    <tr>
+        <th>Country Code</th>
+        <th><?= isset($data['countryCode']) ? $data['countryCode'] : '' ?></th>
+    </tr>
+    <tr>
+        <th>Latitude Code</th>
+        <th><?= isset($data['lat']) ? $data['lat'] : '' ?></th>
+    </tr>
+    <tr>
+        <th>Longitude Code</th>
+        <th><?= isset($data['lon']) ? $data['lon'] : '' ?></th>
+    </tr>
+</table>
+<div style="padding-top: 20px"></div>
+<iframe src="//maps.google.com/maps?q=<?= isset($data['lat']) ? $data['lat'] : '' ?>,<?= isset($data['lon']) ? $data['lon'] : '' ?>&z=15&output=embed"></iframe>
+</body>
+</html>
