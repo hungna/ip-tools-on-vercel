@@ -50,7 +50,7 @@ class AppController
     public function only_ip_txt(Request $request, Response $response)
     {
         $currentIP = getIpAddress();
-        return $response->withStatus(200)->write($currentIP);
+        return $response->write($currentIP)->withStatus(200);
     }
 
     public function ip_address(Request $request, Response $response)
