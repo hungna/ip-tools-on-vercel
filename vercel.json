@@ -13,7 +13,7 @@
             "dest": "assets/$1/$2"
         },
         {
-            "src": "/favicon.ico",
+            "src": "/api/favicon.ico",
             "dest": "/api/favicon.ico"
         },
         {
