@@ -2,10 +2,15 @@
 
 1 con tools nhỏ dùng lấy thông tin IP
 
+## View IPs with map
+
+- https://ip.nguyenanhung.com/view
+- https://ip.nguyenanhung.com/view?ip=1.1.1.1
+
 ## Example Usage
 
 ```shell
-curl --location 'https://ip-tools-ruby.vercel.app/?ip=1.1.1.1'
+curl --location 'https://ip.nguyenanhung.com/?ip=1.1.1.1'
 ```
 
 ```php
@@ -14,7 +19,7 @@ curl --location 'https://ip-tools-ruby.vercel.app/?ip=1.1.1.1'
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://ip-tools-ruby.vercel.app/?ip=1.1.1.1',
+  CURLOPT_URL => 'https://ip.nguyenanhung.com/?ip=1.1.1.1',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
