@@ -2,6 +2,7 @@
     "name": "nguyenanhung/my-ip-tools",
     "description": "My IP Tools - Use Slim Framework 3 and Deploy to Vercel",
     "keywords": [
+        "ip toolkit",
         "micro framework",
         "php micro framework",
         "slim",
