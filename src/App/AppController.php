@@ -47,6 +47,12 @@ class AppController
         return $response->withJson($data, 200, JSON_PRETTY_PRINT);
     }
 
+    public function only_ip_txt(Request $request, Response $response)
+    {
+        $currentIP = getIpAddress();
+        return $response->withStatus(200)->write($currentIP);
+    }
+
     public function ip_address(Request $request, Response $response)
     {
         $params = $request->getQueryParams();

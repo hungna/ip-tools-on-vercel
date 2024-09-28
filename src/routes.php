@@ -7,22 +7,12 @@
  * Time: 16:44
  */
 
-use Slim\Http\Request;
-use Slim\Http\Response;
-use Slim\Views\PhpRenderer;
-
 /**
  * @var \Slim\App $app
  */
 $app->get('/', App\AppController::class . ':ip_address');
+$app->get('/html', App\AppController::class . ':view_ip_address');
 $app->get('/view', App\AppController::class . ':view_ip_address');
-$app->get('/ip', App\AppController::class . ':only_ip');
+$app->get('/ip', App\AppController::class . ':only_ip_txt');
+$app->get('/ip_json', App\AppController::class . ':only_ip');
 $app->get('/php', App\AppController::class . ':php');
-
-//$app->group('/api/v1', function () use ($app) {
-//	$app->get('/test', App\AppController::class . ':json');
-//});
-//
-//$app->group('', function () use ($app) {
-//    $app->get('/app/test', App\AppController::class . ':test');
-//});
