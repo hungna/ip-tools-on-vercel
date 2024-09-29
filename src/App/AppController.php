@@ -56,11 +56,7 @@ class AppController
     public function ip_address(Request $request, Response $response)
     {
         $params = $request->getQueryParams();
-        if (isset($params['ip'])) {
-            $currentIP = $params['ip'];
-        } else {
-            $currentIP = getIpAddress();
-        }
+        $currentIP = isset($params['ip']) ? $params['ip'] : getIpAddress();
         $ipInfo = getIpInformation($currentIP);
         $ipInfo = json_decode($ipInfo, true);
         $data = array(
@@ -72,11 +68,7 @@ class AppController
     public function ip_address_without_data(Request $request, Response $response)
     {
         $params = $request->getQueryParams();
-        if (isset($params['ip'])) {
-            $currentIP = $params['ip'];
-        } else {
-            $currentIP = getIpAddress();
-        }
+        $currentIP = isset($params['ip']) ? $params['ip'] : getIpAddress();
         $ipInfo = getIpInformation($currentIP);
         $ipInfo = json_decode($ipInfo, true);
         return $response->withJson($ipInfo, 200, JSON_PRETTY_PRINT);
