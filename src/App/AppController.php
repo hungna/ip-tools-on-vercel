@@ -69,6 +69,19 @@ class AppController
         return $response->withJson($data, 200, JSON_PRETTY_PRINT);
     }
 
+    public function ip_address_without_data(Request $request, Response $response)
+    {
+        $params = $request->getQueryParams();
+        if (isset($params['ip'])) {
+            $currentIP = $params['ip'];
+        } else {
+            $currentIP = getIpAddress();
+        }
+        $ipInfo = getIpInformation($currentIP);
+        $ipInfo = json_decode($ipInfo, true);
+        return $response->withJson($ipInfo, 200, JSON_PRETTY_PRINT);
+    }
+
     public function view_ip_address(Request $request, Response $response)
     {
         // Render index view

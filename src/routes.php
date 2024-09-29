@@ -11,6 +11,7 @@
  * @var \Slim\App $app
  */
 $app->get('/', App\AppController::class . ':ip_address');
+$app->get('/json', App\AppController::class . ':ip_address_without_data');
 $app->get('/html', App\AppController::class . ':view_ip_address');
 $app->get('/view', App\AppController::class . ':view_ip_address');
 $app->get('/ip', App\AppController::class . ':only_ip_txt');
